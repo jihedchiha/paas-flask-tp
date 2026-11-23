@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Mon Site{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a class="logo" href="{{ url_for('home') }}">MonSite</a>
+            <nav>
+                <a href="{{ url_for('home') }}">Accueil</a>
+                <a href="{{ url_for('about') }}">À propos</a>
+                <a href="{{ url_for('services') }}">Services</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2026 MonSite - Hébergé sur Azure App Service</p>
+    </footer>
+</body>
+</html>

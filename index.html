@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Bienvenue sur mon site</h1>
+    <p>Un site déployé sur Azure avec Flask.</p>
+    <a class="btn" href="{{ url_for('services') }}">Voir mes services</a>
+</section>
+
+<section class="cards">
+    <div class="card"><h3>Rapide</h3><p>Application légère en Python.</p></div>
+    <div class="card"><h3>Cloud</h3><p>Hébergée sur Azure App Service.</p></div>
+    <div class="card"><h3>Automatisé</h3><p>Déploiement à chaque push GitHub.</p></div>
+</section>
+{% endblock %}
